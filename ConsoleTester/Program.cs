@@ -1,24 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
-using HtmlAgilityPack;
 using System.Diagnostics;
+using System.IO;
 
 namespace ConsoleTester
 {
     class Program
     {
-
-        int callnum;
-        string unitname;
-        DateTime date1;
-        DateTime date2;
-        DateTime date3;
-        DateTime date4;
-
 
         static void createDictionary()
         {
@@ -31,13 +19,13 @@ namespace ConsoleTester
             ourdictionary.Add(4, "2014-11-25 21:39:07.000");
             ourdictionary.Add(5, "2014-11-25 21:39:07.000");
 
-            // convert stuff
+            Console.WriteLine(ourdictionary[0]);
+            Console.WriteLine(ourdictionary[1]);
+            Console.WriteLine(ourdictionary[2]);
+            Console.WriteLine(ourdictionary[3]);
+            Console.WriteLine(ourdictionary[4]);
+            Console.WriteLine(ourdictionary[5]);
 
-            Int32.Parse(ourdictionary[0]);
-            DateTime.Parse(ourdictionary[2]);
-            DateTime.Parse(ourdictionary[2]);
-            DateTime.Parse(ourdictionary[2]);
-            DateTime.Parse(ourdictionary[2]);
         }
 
         static void createObject()
@@ -50,6 +38,13 @@ namespace ConsoleTester
             ourUnitTime.date2 = DateTime.Parse("2014-11-25 21:39:07.000");
             ourUnitTime.date3 = DateTime.Parse("2014-11-25 21:39:07.000");
             ourUnitTime.date4 = DateTime.Parse("2014-11-25 21:39:07.000");
+
+            Console.WriteLine(ourUnitTime.callnum);
+            Console.WriteLine(ourUnitTime.unitname);
+            Console.WriteLine(ourUnitTime.date1);
+            Console.WriteLine(ourUnitTime.date2);
+            Console.WriteLine(ourUnitTime.date3);
+            Console.WriteLine(ourUnitTime.date4);
         }
 
         static void createStruct()
@@ -63,6 +58,13 @@ namespace ConsoleTester
             ourStruct.date3 = DateTime.Parse("2014-11-25 21:39:07.000");
             ourStruct.date4 = DateTime.Parse("2014-11-25 21:39:07.000");
 
+            Console.WriteLine(ourStruct.callnum);
+            Console.WriteLine(ourStruct.unitname);
+            Console.WriteLine(ourStruct.date1);
+            Console.WriteLine(ourStruct.date2);
+            Console.WriteLine(ourStruct.date3);
+            Console.WriteLine(ourStruct.date4);
+
         }
         static void Main(string[] args)
         {
@@ -74,25 +76,42 @@ namespace ConsoleTester
             stopwatch.Start();
     
             // dictionary test
-            int runs = 1000000;
-
+            int runs = Int32.Parse(args[1]);
+            
             for (int i = 0; i < runs; i++)
             {
-                //createDictionary();
-                //createObject();
-                createStruct();
+
+                switch (args[0])
+                {
+                    case "dictionary":
+                        createDictionary();
+                        break;
+                    case "object":
+                        createObject();
+                        break;
+                    case "struct":
+                        createStruct();
+                        break;
+                }
 
             }
 
             stopwatch.Stop();
+
             // Get the elapsed time as a TimeSpan value.
             TimeSpan ts = stopwatch.Elapsed;
 
             // Format and display the TimeSpan value 
-            Console.WriteLine("Time elapsed: {0}", stopwatch.Elapsed);
-          
-                Console.ReadLine();
+            //Console.WriteLine("Time elapsed: {0}", stopwatch.Elapsed);
 
+            string fileName = args[0] + "-" + args[1] + ".txt";
+
+            using (var fs = new FileStream(fileName, FileMode.Append, FileAccess.Write))
+            using (var sw = new StreamWriter(fs))
+            {
+                sw.WriteLine("{0}", stopwatch.Elapsed);
+            }
+          
         }
     }
 }

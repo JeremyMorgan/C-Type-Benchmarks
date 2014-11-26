@@ -6,3 +6,8 @@ c:\users\jeremy\documents\visual studio 2013\Projects\ConsoleTester\ConsoleTeste
 c:\users\jeremy\documents\visual studio 2013\Projects\ConsoleTester\ConsoleTester\obj\Debug\ConsoleTester.csprojResolveAssemblyReference.cache
 c:\users\jeremy\documents\visual studio 2013\Projects\ConsoleTester\ConsoleTester\obj\Debug\ConsoleTester.exe
 c:\users\jeremy\documents\visual studio 2013\Projects\ConsoleTester\ConsoleTester\obj\Debug\ConsoleTester.pdb
+C:\Users\jemorgan\Documents\Visual Studio 2013\Projects\C-Type-Benchmarks\ConsoleTester\bin\Debug\ConsoleTester.exe.config
+C:\Users\jemorgan\Documents\Visual Studio 2013\Projects\C-Type-Benchmarks\ConsoleTester\obj\Debug\ConsoleTester.exe
+C:\Users\jemorgan\Documents\Visual Studio 2013\Projects\C-Type-Benchmarks\ConsoleTester\obj\Debug\ConsoleTester.pdb
+C:\Users\jemorgan\Documents\Visual Studio 2013\Projects\C-Type-Benchmarks\ConsoleTester\bin\Debug\ConsoleTester.exe
+C:\Users\jemorgan\Documents\Visual Studio 2013\Projects\C-Type-Benchmarks\ConsoleTester\bin\Debug\ConsoleTester.pdb
