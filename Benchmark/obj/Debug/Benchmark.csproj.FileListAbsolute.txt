@@ -1,0 +1,6 @@
+c:\users\jemorgan\documents\visual studio 2013\Projects\Benchmark\Benchmark\bin\Debug\Benchmark.exe.config
+c:\users\jemorgan\documents\visual studio 2013\Projects\Benchmark\Benchmark\bin\Debug\Benchmark.exe
+c:\users\jemorgan\documents\visual studio 2013\Projects\Benchmark\Benchmark\bin\Debug\Benchmark.pdb
+c:\users\jemorgan\documents\visual studio 2013\Projects\Benchmark\Benchmark\obj\Debug\Benchmark.csprojResolveAssemblyReference.cache
+c:\users\jemorgan\documents\visual studio 2013\Projects\Benchmark\Benchmark\obj\Debug\Benchmark.exe
+c:\users\jemorgan\documents\visual studio 2013\Projects\Benchmark\Benchmark\obj\Debug\Benchmark.pdb
